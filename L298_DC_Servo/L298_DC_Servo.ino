@@ -11,6 +11,7 @@ void loop() {
   for (int angle = 0; angle <= 270; angle++) {
     s.write(angle);
     Serial.println(angle);
+    serial.print(s);
     delay(20);
   }
 
@@ -18,9 +19,12 @@ void loop() {
 
   for (int angle = 270; angle >= 0; angle--) {
     s.write(angle);
+    delay(10);
     Serial.println(angle);
     delay(20);
   }
 
   delay(2000);
+  Serial.print("Done");
+
 }
